@@ -12,17 +12,17 @@
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: black;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: black;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: black;
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +33,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: black;
   }
   
   .post-list {
@@ -49,7 +49,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid black;
   }
   
   textarea {
@@ -83,7 +83,7 @@
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 2em;
   }
   
   main {
@@ -97,7 +97,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: black;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,15 +106,15 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: black;
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: black;
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: black;
   }
   
   .post {
@@ -131,15 +131,6 @@
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
   }
   
   .comment-form {
@@ -170,7 +161,7 @@
   }
   
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid black;
     display: flex;
     justify-content: center;
     padding: 1%;

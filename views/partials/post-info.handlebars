@@ -1,11 +1,12 @@
-<article class="post">
-    <div class="title">
-        <a href="content" target="_blank">{{title}}</a>
-        <span>({{content}})</span>
-    </div>
-
+<div class="comments">
+  {{#each post.comments}}
+  <section class="comment">
     <div class="meta">
-        by {{user.username}} on {{format_date created_at}} |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      {{user.username}} on {{created_at}}
     </div>
-</article>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
