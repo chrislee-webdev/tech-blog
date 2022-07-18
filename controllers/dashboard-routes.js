@@ -24,11 +24,14 @@ router.get('/', (req, res) => {
       ]
     })
       .then(dbUserData => {
+        
         if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
         // res.json(dbUserData);
+        // const user = dbUserData.map(post => post.get({ plain: true }));
+
         res.render("dashboard", dbUserData)
       })
       .catch(err => {
