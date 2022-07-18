@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
           return;
         }
         // res.json(dbUserData);
-        res.render("dashboard",dbUserData)
+        res.render("dashboard", dbUserData)
       })
       .catch(err => {
         console.log(err);
