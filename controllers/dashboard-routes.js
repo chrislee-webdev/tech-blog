@@ -3,36 +3,24 @@ const { User, Post, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     const userid =  req.session.user_id
-    User.findOne({
-      attributes: { exclude: ['password'] },
+    console.log(req.session.user_id,"DAShboard")
+    Post.findAll({
+      
       where: {
-        id: userid
-      },
-      include: [
-        {
-          model: Post,
-          
-        },
-        {
-          model: Comment,
-         
-          include: {
-            model: Post,
-            attributes: ['title']
-          }
-        }
-      ]
+        user_id: userid
+      }
     })
       .then(dbUserData => {
         
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id' });
+          console.log(dbUserData)
+          res.status(404).json({ message: 'No user post found with this user id' });
           return;
         }
         // res.json(dbUserData);
-        // const user = dbUserData.map(post => post.get({ plain: true }));
-
-        res.render("dashboard", dbUserData)
+      const posts= dbUserData.map(post => post.get({ plain: true }));
+        console.log(posts,"GET-dashboard+++++",dbUserData)
+        res.render("dashboard", {posts:posts,loggedIn:req.session.loggedIn})
       })
       .catch(err => {
         console.log(err);

@@ -1,12 +1,12 @@
 <div class="comments">
-  {{#each post.comments}}
+  {{ title}}
+  {{post.createdAt}}
   <section class="comment">
     <div class="meta">
-      {{user.username}} on {{created_at}}
+       on {{createdAt}}
     </div>
     <div class="text">
-      {{comment_text}}
+      {{content}}
     </div>
   </section>
-  {{/each}}
 </div>
